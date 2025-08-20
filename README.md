@@ -4,10 +4,10 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/8ito4/ret---ensino)
 
-## 🚀 Demonstração
+## �� Demonstração
 
-- **Produção**: [ret-ensino.vercel.app](https://ret-ensino.vercel.app)
-- **Desenvolvimento Local**: `http://localhost:2000`
+- **🌐 Site Online**: [ret-ensino.vercel.app](https://ret-ensino.vercel.app)
+- **💻 Desenvolvimento Local**: `http://localhost:2000`
 
 ## 📋 Sobre o Projeto
 
