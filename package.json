@@ -1,0 +1,31 @@
+{
+  "name": "ret-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page moderna e responsiva para a Rede de Ensino Técnico (RET)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 2000",
+    "start": "python3 -m http.server 2000",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "landing-page",
+    "education",
+    "technical-courses",
+    "ret",
+    "ensino-tecnico",
+    "responsive",
+    "html",
+    "tailwindcss"
+  ],
+  "author": "Rede de Ensino Técnico - RET",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/8ito4/ret---ensino.git"
+  },
+  "homepage": "https://ret-ensino.vercel.app",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
