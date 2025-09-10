@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#001F54">
+    
+    <!-- SEO Meta Tags -->
+    <title>Quem Somos - RET | Rede de Ensino Técnico</title>
+    <meta name="description" content="Conheça a história da RET - Rede de Ensino Técnico. Mais de 15 anos de experiência formando profissionais qualificados para o mercado de trabalho.">
+    <meta name="keywords" content="RET história, rede ensino técnico, educação profissional, escola técnica, cursos MEC">
+    <meta name="author" content="Rede de Ensino Técnico - RET">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Quem Somos - RET | Rede de Ensino Técnico">
+    <meta property="og:description" content="Conheça a história da RET e nossa missão de formar profissionais qualificados há mais de 15 anos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ret-ensino.vercel.app/quem-somos.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop">
+    <meta property="og:site_name" content="Rede de Ensino Técnico">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ret-blue-dark': '#001F54',
+                        'ret-blue-medium': '#004AAD',
+                        'ret-yellow': '#FFD400',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #001F54 0%, #004AAD 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="ret.png" alt="RET - Rede de Ensino Técnico" class="h-14 w-auto mr-3">
+                    <span class="text-2xl font-bold text-ret-blue-dark">RET</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#inicio" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Início</a>
+                    <a href="quem-somos.html" class="text-ret-blue-medium font-semibold transition-colors duration-200">Quem Somos</a>
+                    <a href="index.html#cursos" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Cursos</a>
+                    <a href="index.html#diferenciais" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Diferenciais</a>
+                    <a href="index.html#faq" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">FAQ</a>
+                    <a href="index.html#contato" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Contato</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="index.html#matricula" class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200">
+                        Matricule-se Agora
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2">
+                    <i class="fas fa-bars h-6 w-6 text-ret-blue-dark"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden bg-white border-t hidden">
+                <nav class="py-4">
+                    <a href="index.html#inicio" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Início</a>
+                    <a href="quem-somos.html" class="block px-4 py-2 text-ret-blue-medium font-semibold bg-gray-50">Quem Somos</a>
+                    <a href="index.html#cursos" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Cursos</a>
+                    <a href="index.html#diferenciais" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Diferenciais</a>
+                    <a href="index.html#faq" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">FAQ</a>
+                    <a href="index.html#contato" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Contato</a>
+                    <div class="px-4 pt-4">
+                        <a href="index.html#matricula" class="block w-full bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold text-center hover:bg-yellow-300 transition-colors duration-200">
+                            Matricule-se Agora
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <div class="bg-ret-yellow rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-users text-ret-blue-dark text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Quem Somos
+                </h1>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
+                    Conheça a história da RET e nossa missão de formar profissionais qualificados para o mercado de trabalho há mais de 15 anos.
+                </p>
+                <a href="index.html" class="bg-ret-yellow text-ret-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Voltar ao Início
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa História -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl font-bold text-ret-blue-dark mb-6">Nossa História</h2>
+                        <div class="w-24 h-1 bg-ret-yellow mb-6"></div>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Fundada em 2008, a <strong>RET - Rede de Ensino Técnico</strong> nasceu com o propósito de democratizar o acesso à educação técnica de qualidade, oferecendo cursos reconhecidos pelo MEC que preparam profissionais para os desafios do mercado de trabalho moderno.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Ao longo de mais de <strong>15 anos de atuação</strong>, formamos milhares de técnicos qualificados em diversas áreas, contribuindo para o desenvolvimento profissional de pessoas em todo o Brasil.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Nossa metodologia inovadora combina ensino teórico sólido com aplicação prática, garantindo que nossos alunos estejam prontos para enfrentar os desafios reais do mercado de trabalho.
+                        </p>
+                    </div>
+                    <div data-aos="fade-left">
+                        <div class="bg-gradient-to-br from-ret-blue-dark to-ret-blue-medium rounded-3xl p-8 text-white">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-ret-yellow mb-2">15+</div>
+                                    <div class="text-sm text-gray-200">Anos de Experiência</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-ret-yellow mb-2">12</div>
+                                    <div class="text-sm text-gray-200">Cursos Técnicos</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-ret-yellow mb-2">100%</div>
+                                    <div class="text-sm text-gray-200">Reconhecido MEC</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-ret-yellow mb-2">5k+</div>
+                                    <div class="text-sm text-gray-200">Alunos Formados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão, Visão e Valores -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-ret-blue-dark mb-6">
+                    Missão, Visão e Valores
+                </h2>
+                <div class="w-24 h-1 bg-ret-yellow mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Nossos pilares fundamentais que guiam todas as nossas ações e decisões.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Missão -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-ret-blue-dark to-ret-blue-medium rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-ret-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-ret-blue-dark mb-4 text-center">Missão</h3>
+                    <p class="text-gray-600 leading-relaxed text-center">
+                        Proporcionar educação técnica de excelência, formando profissionais qualificados e éticos, capazes de contribuir para o desenvolvimento da sociedade e do mercado de trabalho.
+                    </p>
+                </div>
+
+                <!-- Visão -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-ret-blue-dark to-ret-blue-medium rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-ret-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-ret-blue-dark mb-4 text-center">Visão</h3>
+                    <p class="text-gray-600 leading-relaxed text-center">
+                        Ser reconhecida como a principal instituição de ensino técnico do Brasil, referência em inovação educacional e excelência na formação profissional.
+                    </p>
+                </div>
+
+                <!-- Valores -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-ret-blue-dark to-ret-blue-medium rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-ret-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-ret-blue-dark mb-4 text-center">Valores</h3>
+                    <ul class="text-gray-600 leading-relaxed text-left space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-ret-yellow mr-2"></i> Excelência educacional</li>
+                        <li class="flex items-center"><i class="fas fa-check text-ret-yellow mr-2"></i> Ética e transparência</li>
+                        <li class="flex items-center"><i class="fas fa-check text-ret-yellow mr-2"></i> Inovação pedagógica</li>
+                        <li class="flex items-center"><i class="fas fa-check text-ret-yellow mr-2"></i> Compromisso social</li>
+                        <li class="flex items-center"><i class="fas fa-check text-ret-yellow mr-2"></i> Desenvolvimento humano</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reconhecimentos -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-ret-blue-dark mb-6">
+                    Reconhecimentos e Certificações
+                </h2>
+                <div class="w-24 h-1 bg-ret-yellow mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Nossa qualidade é reconhecida pelos principais órgãos educacionais do país.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Reconhecimento 1 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-ret-blue-dark mb-2">Reconhecido MEC</h4>
+                    <p class="text-gray-600 text-sm">Todos os cursos certificados pelo Ministério da Educação</p>
+                </div>
+
+                <!-- Reconhecimento 2 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-ret-blue-dark mb-2">ISO 9001</h4>
+                    <p class="text-gray-600 text-sm">Certificação internacional de qualidade em gestão</p>
+                </div>
+
+                <!-- Reconhecimento 3 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-ret-blue-dark mb-2">ABED</h4>
+                    <p class="text-gray-600 text-sm">Associação Brasileira de Educação a Distância</p>
+                </div>
+
+                <!-- Reconhecimento 4 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-ret-blue-dark mb-2">SISTEC</h4>
+                    <p class="text-gray-600 text-sm">Sistema Nacional de Informações da Educação Profissional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="py-20 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Faça Parte da Nossa História
+                </h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Junte-se a milhares de profissionais que transformaram suas carreiras com a RET.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="index.html#matricula" class="bg-ret-yellow text-ret-blue-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all duration-200 inline-flex items-center justify-center shadow-lg transform hover:scale-105">
+                        <i class="fas fa-graduation-cap mr-3"></i>
+                        Matricule-se Agora
+                    </a>
+                    <a href="cursos_extras.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
+                        <i class="fas fa-book-open mr-3"></i>
+                        Conheça Nossos Cursos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-gray-200">
+                <div class="flex items-center justify-center mb-6">
+                    <img src="ret.png" alt="RET Logo" class="h-10 w-auto mr-3">
+                    <span class="text-2xl font-bold text-white">RET</span>
+                </div>
+                <p class="mb-6">© 2024 RET - Rede de Ensino Técnico. Todos os direitos reservados.</p>
+                <a href="index.html" class="text-ret-yellow hover:text-white transition-colors duration-200">
+                    Voltar ao Site Principal
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

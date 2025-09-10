@@ -61,6 +61,19 @@
         .gradient-bg {
             background: linear-gradient(135deg, #001F54 0%, #004AAD 100%);
         }
+        .course-card {
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-card .course-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-card .course-description {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -77,10 +90,10 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-6">
                     <a href="#inicio" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Início</a>
-                    <a href="#quem-somos" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Quem Somos</a>
+                    <a href="quem-somos.html" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Quem Somos</a>
                     <a href="#cursos" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Cursos</a>
                     <a href="#diferenciais" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Diferenciais</a>
-                    <a href="#depoimentos" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Depoimentos</a>
+
                     <a href="#faq" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">FAQ</a>
                     <a href="#contato" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Contato</a>
                 </nav>
@@ -102,10 +115,10 @@
             <div id="mobile-menu" class="lg:hidden bg-white border-t hidden">
                 <nav class="py-4">
                     <a href="#inicio" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Início</a>
-                    <a href="#quem-somos" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Quem Somos</a>
+                    <a href="quem-somos.html" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Quem Somos</a>
                     <a href="#cursos" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Cursos</a>
                     <a href="#diferenciais" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Diferenciais</a>
-                    <a href="#depoimentos" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Depoimentos</a>
+
                     <a href="#faq" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">FAQ</a>
                     <a href="#contato" class="block px-4 py-2 text-ret-blue-dark hover:bg-gray-50 transition-colors duration-200">Contato</a>
                     <div class="px-4 pt-4">
@@ -118,251 +131,230 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="gradient-bg text-white min-h-screen flex items-center pt-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Content -->
-                <div class="text-center lg:text-left" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                        Transforme seu futuro com 
-                        <span class="text-ret-yellow">cursos técnicos</span> 
-                        reconhecidos pelo MEC
-                    </h1>
-                    
-                    <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                        Capacite-se com nossa metodologia inovadora e conquiste as melhores oportunidades 
-                        do mercado de trabalho. Mais de 15 anos formando profissionais de sucesso.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-                        <a href="#cursos" class="bg-ret-yellow text-ret-blue-dark px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
-                            <i class="fas fa-graduation-cap mr-2"></i>
-                            Quero minha vaga
-                        </a>
-                        
-                        <a href="#contato" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
-                            <i class="fas fa-users mr-2"></i>
-                            Fale com um atendente
-                        </a>
-                    </div>
-
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-8 text-center lg:text-left" data-aos="fade-up" data-aos-delay="400">
-                        <div>
-                            <div class="text-3xl font-bold text-ret-yellow">+15</div>
-                            <div class="text-sm text-gray-300">Anos de experiência</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-ret-yellow">+5000</div>
-                            <div class="text-sm text-gray-300">Alunos formados</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-ret-yellow">20+</div>
-                            <div class="text-sm text-gray-300">Cursos disponíveis</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Logo RET Grande -->
-                <div class="relative flex flex-col items-center justify-center -mt-8" data-aos="fade-left" data-aos-delay="200">
-                    <img src="ret.png" alt="RET - Rede de Ensino Técnico" class="w-96 md:w-[500px] lg:w-[600px] h-auto mx-auto filter drop-shadow-2xl hover:scale-105 transition-transform duration-300">
-                </div>
+    <!-- Hero Banner Section -->
+    <section id="inicio" class="pt-16 bg-gray-50">
+        <!-- Banner Principal -->
+        <div class="container mx-auto px-4 py-8" data-aos="fade-up">
+            <div class="w-full">
+                <img src="bannersite.png" alt="RET - Banner Principal" class="w-full h-auto object-contain rounded-3xl shadow-2xl">
             </div>
         </div>
+
     </section>
 
-    <!-- Quem Somos -->
-    <section id="quem-somos" class="py-20 bg-white">
+
+
+    <!-- Seção Cursos -->
+    <section id="cursos" class="py-20 bg-gradient-to-br from-ret-blue-dark to-ret-blue-medium">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-ret-blue-dark mb-6">
-                    Quem Somos
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <span class="text-ret-yellow">Cursos técnicos</span> reconhecidos pelo MEC
                 </h2>
                 <div class="w-24 h-1 bg-ret-yellow mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    A Rede de Ensino Técnico (RET) nasceu em 2008 com o propósito de democratizar 
-                    o acesso à educação técnica de qualidade. Fundada por educadores apaixonados, 
-                    nossa instituição cresceu e se consolidou como referência na formação de 
-                    profissionais técnicos qualificados.
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
+                    Mais de 15 anos formando profissionais de sucesso no mercado de trabalho.
                 </p>
-            </div>
-
-            <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
-                    <h3 class="text-2xl md:text-3xl font-semibold text-ret-blue-dark mb-6 text-center">
-                        Nossa História
-                    </h3>
-                    <p class="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-                        Ao longo de mais de 15 anos, formamos milhares de profissionais que hoje ocupam 
-                        posições de destaque no mercado de trabalho. Nossa metodologia combina teoria e 
-                        prática, utilizando tecnologias modernas e mantendo sempre o foco na empregabilidade 
-                        de nossos alunos. Somos credenciados pelo MEC e reconhecidos por empresas de todo 
-                        o país pela qualidade de nossos cursos.
-                    </p>
+                
+                <!-- Botões de Ação -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#matricula" class="bg-ret-yellow text-ret-blue-dark px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Quero minha vaga
+                    </a>
+                    
+                    <a href="cursos_extras.html" class="bg-transparent border-2 border-ret-yellow text-ret-yellow px-8 py-4 rounded-full font-semibold text-lg hover:bg-ret-yellow hover:text-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
+                        <i class="fas fa-book-open mr-2"></i>
+                        Ver todos os cursos
+                    </a>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-ret-blue-dark rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-ret-blue-medium transition-colors duration-300">
-                        <i class="fas fa-bullseye text-ret-yellow text-2xl"></i>
+            <!-- Grade de Cursos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
+                <!-- Técnico em Administração -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-briefcase text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ADMINISTRAÇÃO
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1000h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação completa em gestão administrativa e processos organizacionais.
+                        </p>
+                        <a href="cursos_extras.html#administracao" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-semibold text-ret-blue-dark mb-4">
-                        Missão
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Transformar vidas através da educação técnica de qualidade, preparando profissionais capacitados para o mercado de trabalho com metodologia inovadora e acessível.
-                    </p>
                 </div>
 
-                <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-ret-blue-dark rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-ret-blue-medium transition-colors duration-300">
-                        <i class="fas fa-eye text-ret-yellow text-2xl"></i>
+                <!-- Técnico em Agrimensura -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-map text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM AGRIMENSURA
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Especialização em medição e demarcação de terrenos e propriedades.
+                        </p>
+                        <a href="cursos_extras.html#agrimensura" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-semibold text-ret-blue-dark mb-4">
-                        Visão
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Ser reconhecida como a principal referência em educação técnica do país, formando profissionais competentes e éticos que contribuam para o desenvolvimento da sociedade.
-                    </p>
                 </div>
 
-                <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-ret-blue-dark rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-ret-blue-medium transition-colors duration-300">
-                        <i class="fas fa-heart text-ret-yellow text-2xl"></i>
+                <!-- Técnico em Mecânica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-cogs text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM MECÂNICA
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1200h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação em sistemas mecânicos, manutenção e projetos industriais.
+                        </p>
+                        <a href="cursos_extras.html#mecanica" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-semibold text-ret-blue-dark mb-4">
-                        Valores
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Excelência no ensino, inovação pedagógica, ética profissional, inclusão social, responsabilidade ambiental e compromisso com o desenvolvimento humano.
-                    </p>
+                </div>
+
+                <!-- Técnico em Edificações -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-building text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM EDIFICAÇÕES
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Especialização em construção civil e projetos arquitetônicos.
+                        </p>
+                        <a href="cursos_extras.html#edificacoes" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Técnico em Eletrônica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-microchip text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ELETRÔNICA
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1280h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação em circuitos eletrônicos e sistemas digitais.
+                        </p>
+                        <a href="cursos_extras.html#eletronica" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Técnico em Eletromecânica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-bolt text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ELETROMECÂNICA
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Combinação de conhecimentos elétricos e mecânicos industriais.
+                        </p>
+                        <a href="cursos_extras.html#eletromecanica" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Técnico em Automação Industrial -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-red-500 to-pink-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-robot text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM AUTOMAÇÃO INDUSTRIAL
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1300h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Especialização em sistemas automatizados e controle industrial.
+                        </p>
+                        <a href="cursos_extras.html#automacao" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Técnico em Eletrotécnica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-plug text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ELETROTÉCNICA
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1280h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação em sistemas elétricos e instalações de potência.
+                        </p>
+                        <a href="cursos_extras.html#eletrotecnica" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm mt-auto block text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Cursos em Destaque -->
-    <section id="cursos" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-ret-blue-dark mb-6">
-                    Nossos Cursos em Destaque
-                </h2>
-                <div class="w-24 h-1 bg-ret-yellow mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Descubra nossa seleção de cursos técnicos mais procurados, desenvolvidos 
-                    com foco nas demandas do mercado de trabalho atual.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-briefcase text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-ret-blue-dark mb-4 group-hover:text-ret-blue-medium transition-colors duration-300">
-                        Auxiliar Administrativo
-                    </h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Curso completo com certificação reconhecida pelo MEC e alta empregabilidade no mercado.
-                    </p>
-                    <button class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
-                        Saiba Mais
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-microchip text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-ret-blue-dark mb-4 group-hover:text-ret-blue-medium transition-colors duration-300">
-                        Automação Industrial
-                    </h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Curso completo com certificação reconhecida pelo MEC e alta empregabilidade no mercado.
-                    </p>
-                    <button class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
-                        Saiba Mais
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-bolt text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-ret-blue-dark mb-4 group-hover:text-ret-blue-medium transition-colors duration-300">
-                        Eletricista Básico
-                    </h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Curso completo com certificação reconhecida pelo MEC e alta empregabilidade no mercado.
-                    </p>
-                    <button class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
-                        Saiba Mais
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-truck text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-ret-blue-dark mb-4 group-hover:text-ret-blue-medium transition-colors duration-300">
-                        Gestão em Logística
-                    </h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Curso completo com certificação reconhecida pelo MEC e alta empregabilidade no mercado.
-                    </p>
-                    <button class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
-                        Saiba Mais
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="bg-gradient-to-br from-red-500 to-pink-500 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-pills text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-ret-blue-dark mb-4 group-hover:text-ret-blue-medium transition-colors duration-300">
-                        Atendente de Farmácia
-                    </h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Curso completo com certificação reconhecida pelo MEC e alta empregabilidade no mercado.
-                    </p>
-                    <button class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
-                        Saiba Mais
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
-                    <div class="bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-heartbeat text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-ret-blue-dark mb-4 group-hover:text-ret-blue-medium transition-colors duration-300">
-                        Auxiliar de Enfermagem
-                    </h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Curso completo com certificação reconhecida pelo MEC e alta empregabilidade no mercado.
-                    </p>
-                    <button class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
-                        Saiba Mais
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <a href="/cursos" class="bg-ret-blue-dark text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-ret-blue-medium transition-all duration-200 inline-flex items-center transform hover:scale-105">
-                    Ver todos os cursos
-                    <i class="fas fa-arrow-right ml-3"></i>
+            <!-- Botão Ver Todos os Cursos -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="900">
+                <a href="cursos_extras.html" class="bg-gradient-to-r from-ret-blue-dark to-ret-blue-medium text-white px-8 py-4 rounded-full font-bold text-lg hover:from-ret-blue-medium hover:to-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center shadow-lg transform hover:scale-105">
+                    <i class="fas fa-book-open mr-3"></i>
+                    Ver Todos os Cursos
                 </a>
-                <p class="text-gray-600 mt-4">
-                    Mais de 20 cursos disponíveis em diversas áreas
-                </p>
             </div>
         </div>
     </section>
@@ -382,13 +374,15 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-award text-ret-blue-dark text-xl"></i>
+                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-80 flex flex-col justify-between">
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-award text-ret-blue-dark text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">
+                                Certificação MEC
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">
-                            Certificação MEC
-                        </h3>
                         <p class="text-gray-200 text-sm leading-relaxed">
                             Cursos reconhecidos e certificados pelo Ministério da Educação, garantindo validade nacional.
                         </p>
@@ -396,13 +390,15 @@
                 </div>
 
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-desktop text-ret-blue-dark text-xl"></i>
+                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-80 flex flex-col justify-between">
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-desktop text-ret-blue-dark text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">
+                                Plataforma Moderna
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">
-                            Plataforma Moderna
-                        </h3>
                         <p class="text-gray-200 text-sm leading-relaxed">
                             Ambiente virtual de aprendizagem intuitivo e responsivo, acessível em qualquer dispositivo.
                         </p>
@@ -410,13 +406,15 @@
                 </div>
 
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-headset text-ret-blue-dark text-xl"></i>
+                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-80 flex flex-col justify-between">
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-headset text-ret-blue-dark text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">
+                                Suporte Online
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">
-                            Suporte Online
-                        </h3>
                         <p class="text-gray-200 text-sm leading-relaxed">
                             Atendimento especializado disponível para esclarecer dúvidas e auxiliar no aprendizado.
                         </p>
@@ -424,13 +422,15 @@
                 </div>
 
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-clock text-ret-blue-dark text-xl"></i>
+                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-80 flex flex-col justify-between">
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-clock text-ret-blue-dark text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">
+                                Flexibilidade de Horários
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">
-                            Flexibilidade de Horários
-                        </h3>
                         <p class="text-gray-200 text-sm leading-relaxed">
                             Estude no seu ritmo e horário, conciliando aprendizado com trabalho e vida pessoal.
                         </p>
@@ -438,15 +438,17 @@
                 </div>
 
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="500">
-                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-trophy text-ret-blue-dark text-xl"></i>
+                    <div class="gradient-bg rounded-2xl p-8 mb-6 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-80 flex flex-col justify-between">
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-trophy text-ret-blue-dark text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">
+                                +15 Anos de Experiência
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">
-                            +15 Anos de Experiência
-                        </h3>
                         <p class="text-gray-200 text-sm leading-relaxed">
-                            Tradição e qualidade comprovadas na formação de milhares de profissionais de sucesso.
+                            Mais de uma década formando profissionais qualificados e preparados para o mercado de trabalho.
                         </p>
                     </div>
                 </div>
@@ -483,71 +485,70 @@
                                 <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold z-20">
                                     1
                                 </div>
-                                <h3 class="text-xl font-semibold text-white mb-4">
-                                    Escolha o curso
+                                    Escolha seu Curso
                                 </h3>
-                                <p class="text-gray-200 text-sm leading-relaxed">
-                                    Navegue por nossa ampla seleção de cursos técnicos e encontre o ideal para você.
+                                <p class="text-gray-200 leading-relaxed">
+                                    Navegue por nossa ampla gama de cursos técnicos e encontre o que mais se adequa ao seu perfil.
                                 </p>
                             </div>
-
+                            
                             <div class="text-center relative" data-aos="fade-up" data-aos-delay="200">
                                 <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-credit-card text-ret-blue-dark text-xl"></i>
+                                    <i class="fas fa-user-plus text-ret-blue-dark text-xl"></i>
                                 </div>
                                 <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold z-20">
                                     2
                                 </div>
                                 <h3 class="text-xl font-semibold text-white mb-4">
-                                    Faça sua matrícula
+                                    Faça sua Inscrição
                                 </h3>
-                                <p class="text-gray-200 text-sm leading-relaxed">
-                                    Complete sua inscrição de forma rápida e segura com diversas opções de pagamento.
+                                <p class="text-gray-200 leading-relaxed">
+                                    Preencha o formulário de inscrição com suas informações pessoais e acadêmicas.
                                 </p>
                             </div>
-
+                            
                             <div class="text-center relative" data-aos="fade-up" data-aos-delay="300">
                                 <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-desktop text-ret-blue-dark text-xl"></i>
+                                    <i class="fas fa-credit-card text-ret-blue-dark text-xl"></i>
                                 </div>
                                 <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold z-20">
                                     3
                                 </div>
                                 <h3 class="text-xl font-semibold text-white mb-4">
-                                    Acesse a plataforma
+                                    Efetue o Pagamento
                                 </h3>
-                                <p class="text-gray-200 text-sm leading-relaxed">
-                                    Receba suas credenciais e acesse nossa plataforma moderna de ensino.
+                                <p class="text-gray-200 leading-relaxed">
+                                    Escolha a forma de pagamento que melhor se adequa ao seu orçamento.
                                 </p>
                             </div>
-
+                            
                             <div class="text-center relative" data-aos="fade-up" data-aos-delay="400">
                                 <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-clock text-ret-blue-dark text-xl"></i>
+                                    <i class="fas fa-play text-ret-blue-dark text-xl"></i>
                                 </div>
                                 <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold z-20">
                                     4
                                 </div>
                                 <h3 class="text-xl font-semibold text-white mb-4">
-                                    Estude no seu ritmo
+                                    Comece a Estudar
                                 </h3>
-                                <p class="text-gray-200 text-sm leading-relaxed">
-                                    Aprenda quando e onde quiser, com flexibilidade total de horários.
+                                <p class="text-gray-200 leading-relaxed">
+                                    Acesse nossa plataforma e inicie seus estudos imediatamente.
                                 </p>
                             </div>
-
+                            
                             <div class="text-center relative" data-aos="fade-up" data-aos-delay="500">
                                 <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-award text-ret-blue-dark text-xl"></i>
+                                    <i class="fas fa-certificate text-ret-blue-dark text-xl"></i>
                                 </div>
                                 <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold z-20">
                                     5
                                 </div>
                                 <h3 class="text-xl font-semibold text-white mb-4">
-                                    Receba seu diploma
+                                    Receba seu Certificado
                                 </h3>
-                                <p class="text-gray-200 text-sm leading-relaxed">
-                                    Conclua o curso e receba sua certificação reconhecida pelo MEC.
+                                <p class="text-gray-200 leading-relaxed">
+                                    Conclua o curso e receba seu certificado reconhecido pelo MEC.
                                 </p>
                             </div>
                         </div>
@@ -555,330 +556,211 @@
                 </div>
 
                 <!-- Mobile Layout -->
-                <div class="lg:hidden">
-                    <div class="space-y-8">
-                        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="100">
-                            <div class="relative flex-shrink-0">
-                                <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-search text-ret-blue-dark text-xl"></i>
-                                </div>
-                                <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                                    1
-                                </div>
-                                <div class="absolute top-16 left-8 w-0.5 h-12 bg-ret-yellow/50"></div>
-                            </div>
-                            <div class="flex-1 pt-2">
-                                <h3 class="text-xl font-semibold text-white mb-2">
-                                    Escolha o curso
-                                </h3>
-                                <p class="text-gray-200 leading-relaxed">
-                                    Navegue por nossa ampla seleção de cursos técnicos e encontre o ideal para você.
-                                </p>
-                            </div>
+                <div class="lg:hidden space-y-8">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-search text-ret-blue-dark text-xl"></i>
                         </div>
-
-                        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="200">
-                            <div class="relative flex-shrink-0">
-                                <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-credit-card text-ret-blue-dark text-xl"></i>
-                                </div>
-                                <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                                    2
-                                </div>
-                                <div class="absolute top-16 left-8 w-0.5 h-12 bg-ret-yellow/50"></div>
-                            </div>
-                            <div class="flex-1 pt-2">
-                                <h3 class="text-xl font-semibold text-white mb-2">
-                                    Faça sua matrícula
-                                </h3>
-                                <p class="text-gray-200 leading-relaxed">
-                                    Complete sua inscrição de forma rápida e segura com diversas opções de pagamento.
-                                </p>
-                            </div>
+                        <div class="bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                            1
                         </div>
-
-                        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="300">
-                            <div class="relative flex-shrink-0">
-                                <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-desktop text-ret-blue-dark text-xl"></i>
-                                </div>
-                                <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                                    3
-                                </div>
-                                <div class="absolute top-16 left-8 w-0.5 h-12 bg-ret-yellow/50"></div>
-                            </div>
-                            <div class="flex-1 pt-2">
-                                <h3 class="text-xl font-semibold text-white mb-2">
-                                    Acesse a plataforma
-                                </h3>
-                                <p class="text-gray-200 leading-relaxed">
-                                    Receba suas credenciais e acesse nossa plataforma moderna de ensino.
-                                </p>
-                            </div>
+                        <h3 class="text-xl font-semibold text-white mb-4">
+                            Escolha seu Curso
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Navegue por nossa ampla gama de cursos técnicos e encontre o que mais se adequa ao seu perfil.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-user-plus text-ret-blue-dark text-xl"></i>
                         </div>
-
-                        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="400">
-                            <div class="relative flex-shrink-0">
-                                <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-clock text-ret-blue-dark text-xl"></i>
-                                </div>
-                                <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                                    4
-                                </div>
-                                <div class="absolute top-16 left-8 w-0.5 h-12 bg-ret-yellow/50"></div>
-                            </div>
-                            <div class="flex-1 pt-2">
-                                <h3 class="text-xl font-semibold text-white mb-2">
-                                    Estude no seu ritmo
-                                </h3>
-                                <p class="text-gray-200 leading-relaxed">
-                                    Aprenda quando e onde quiser, com flexibilidade total de horários.
-                                </p>
-                            </div>
+                        <div class="bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                            2
                         </div>
-
-                        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="500">
-                            <div class="relative flex-shrink-0">
-                                <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-award text-ret-blue-dark text-xl"></i>
-                                </div>
-                                <div class="absolute -top-2 -right-2 bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                                    5
-                                </div>
-                            </div>
-                            <div class="flex-1 pt-2">
-                                <h3 class="text-xl font-semibold text-white mb-2">
-                                    Receba seu diploma
-                                </h3>
-                                <p class="text-gray-200 leading-relaxed">
-                                    Conclua o curso e receba sua certificação reconhecida pelo MEC.
-                                </p>
-                            </div>
+                        <h3 class="text-xl font-semibold text-white mb-4">
+                            Faça sua Inscrição
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Preencha o formulário de inscrição com suas informações pessoais e acadêmicas.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-credit-card text-ret-blue-dark text-xl"></i>
                         </div>
+                        <div class="bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                            3
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-4">
+                            Efetue o Pagamento
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Escolha a forma de pagamento que melhor se adequa ao seu orçamento.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-play text-ret-blue-dark text-xl"></i>
+                        </div>
+                        <div class="bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                            4
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-4">
+                            Comece a Estudar
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Acesse nossa plataforma e inicie seus estudos imediatamente.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                        <div class="bg-ret-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-certificate text-ret-blue-dark text-xl"></i>
+                        </div>
+                        <div class="bg-ret-blue-dark text-ret-yellow rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                            5
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-4">
+                            Receba seu Certificado
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Conclua o curso e receba seu certificado reconhecido pelo MEC.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="600">
-                <a href="#cursos" class="bg-ret-yellow text-ret-blue-dark px-12 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-all duration-200 inline-flex items-center transform hover:scale-105">
-                    Comece agora mesmo
-                    <i class="fas fa-search ml-3"></i>
+                <a href="#cursos" class="bg-ret-yellow text-ret-blue-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all duration-200 inline-flex items-center justify-center shadow-lg transform hover:scale-105">
+                    <i class="fas fa-rocket mr-3"></i>
+                    Começar Agora
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-ret-blue-dark mb-6">
-                    Histórias de Sucesso
-                </h2>
-                <div class="w-24 h-1 bg-ret-yellow mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Conheça os depoimentos de quem já transformou sua vida profissional conosco.
-                </p>
-            </div>
 
-            <div class="max-w-4xl mx-auto">
-                <div class="relative">
-                    <div id="testimonial-container" class="gradient-bg rounded-2xl p-8 md:p-12 text-white relative overflow-hidden" data-aos="fade-up">
-                        <!-- Background Quote -->
-                        <i class="fas fa-quote-left absolute top-4 right-4 text-6xl text-ret-yellow/20"></i>
-                        
-                        <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-                            <!-- Profile Image -->
-                            <div class="flex-shrink-0">
-                                <img id="testimonial-image" src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Maria Silva" class="w-24 h-24 rounded-full object-cover border-4 border-ret-yellow">
-                            </div>
-                            
-                            <!-- Content -->
-                            <div class="flex-1 text-center md:text-left">
-                                <!-- Stars -->
-                                <div class="flex justify-center md:justify-start mb-4">
-                                    <i class="fas fa-star text-ret-yellow"></i>
-                                    <i class="fas fa-star text-ret-yellow"></i>
-                                    <i class="fas fa-star text-ret-yellow"></i>
-                                    <i class="fas fa-star text-ret-yellow"></i>
-                                    <i class="fas fa-star text-ret-yellow"></i>
-                                </div>
-                                
-                                <!-- Testimonial Text -->
-                                <blockquote id="testimonial-text" class="text-xl md:text-2xl text-gray-200 mb-6 leading-relaxed italic">
-                                    "A RET transformou minha carreira! Em apenas 6 meses consegui uma promoção na empresa onde trabalho. A metodologia é excelente e o suporte dos professores é incrível."
-                                </blockquote>
-                                
-                                <!-- Author Info -->
-                                <div>
-                                    <div id="testimonial-name" class="text-2xl font-semibold text-white mb-1">
-                                        Maria Silva
-                                    </div>
-                                    <div id="testimonial-course" class="text-ret-yellow font-medium">
-                                        Formada em Auxiliar Administrativo
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Navigation Buttons -->
-                    <button id="prev-testimonial" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-colors duration-200">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    
-                    <button id="next-testimonial" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-colors duration-200">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-
-                <!-- Dots Indicator -->
-                <div class="flex justify-center mt-8 space-x-2">
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-ret-blue-dark transition-colors duration-200" data-index="0"></button>
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 transition-colors duration-200" data-index="1"></button>
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 transition-colors duration-200" data-index="2"></button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ -->
     <section id="faq" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold text-ret-blue-dark mb-6">
-                    Dúvidas Frequentes
+                    Perguntas Frequentes
                 </h2>
                 <div class="w-24 h-1 bg-ret-yellow mx-auto mb-8"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Tire suas principais dúvidas sobre nossos cursos e metodologia.
+                    Tire suas dúvidas sobre nossos cursos e metodologia de ensino.
                 </p>
             </div>
 
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-4">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="100">
-                        <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
-                            <div class="flex items-center">
-                                <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
-                                    <i class="fas fa-question-circle text-ret-yellow"></i>
-                                </div>
-                                <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
-                                    O diploma é reconhecido pelo MEC?
-                                </h3>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
+                        <div class="flex items-center">
+                            <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
+                                <i class="fas fa-question-circle text-ret-yellow"></i>
                             </div>
-                            <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
-                        </button>
-                        <div class="faq-content hidden">
-                            <div class="px-6 pb-6 pl-16">
-                                <p class="text-gray-600 leading-relaxed">
-                                    Sim! Todos os nossos cursos são credenciados pelo Ministério da Educação (MEC) e possuem validade nacional. Você receberá um certificado de curso técnico reconhecido em todo o território brasileiro.
-                                </p>
-                            </div>
+                            <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
+                                O diploma é reconhecido pelo MEC?
+                            </h3>
                         </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="200">
-                        <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
-                            <div class="flex items-center">
-                                <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
-                                    <i class="fas fa-question-circle text-ret-yellow"></i>
-                                </div>
-                                <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
-                                    Os cursos são totalmente online?
-                                </h3>
-                            </div>
-                            <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
-                        </button>
-                        <div class="faq-content hidden">
-                            <div class="px-6 pb-6 pl-16">
-                                <p class="text-gray-600 leading-relaxed">
-                                    Sim, todos os nossos cursos são 100% online. Você pode estudar de qualquer lugar, a qualquer hora, usando computador, tablet ou smartphone. Nossa plataforma é moderna e responsiva.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="300">
-                        <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
-                            <div class="flex items-center">
-                                <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
-                                    <i class="fas fa-question-circle text-ret-yellow"></i>
-                                </div>
-                                <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
-                                    Como funciona o suporte ao aluno?
-                                </h3>
-                            </div>
-                            <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
-                        </button>
-                        <div class="faq-content hidden">
-                            <div class="px-6 pb-6 pl-16">
-                                <p class="text-gray-600 leading-relaxed">
-                                    Oferecemos suporte completo através de chat online, e-mail e telefone. Nossa equipe pedagógica está disponível para esclarecer dúvidas sobre o conteúdo, enquanto o suporte técnico auxilia com questões da plataforma.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="400">
-                        <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
-                            <div class="flex items-center">
-                                <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
-                                    <i class="fas fa-question-circle text-ret-yellow"></i>
-                                </div>
-                                <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
-                                    Quanto tempo demora para concluir um curso?
-                                </h3>
-                            </div>
-                            <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
-                        </button>
-                        <div class="faq-content hidden">
-                            <div class="px-6 pb-6 pl-16">
-                                <p class="text-gray-600 leading-relaxed">
-                                    A duração varia conforme o curso escolhido, mas a maioria dos nossos cursos técnicos pode ser concluída entre 6 a 18 meses. Você estuda no seu próprio ritmo, podendo acelerar ou desacelerar conforme sua disponibilidade.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="500">
-                        <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
-                            <div class="flex items-center">
-                                <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
-                                    <i class="fas fa-question-circle text-ret-yellow"></i>
-                                </div>
-                                <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
-                                    Posso parcelar o pagamento do curso?
-                                </h3>
-                            </div>
-                            <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
-                        </button>
-                        <div class="faq-content hidden">
-                            <div class="px-6 pb-6 pl-16">
-                                <p class="text-gray-600 leading-relaxed">
-                                    Sim! Oferecemos diversas opções de pagamento, incluindo parcelamento em até 12x no cartão de crédito, boleto bancário e Pix. Também temos condições especiais para pagamento à vista.
-                                </p>
-                            </div>
+                        <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600 leading-relaxed pl-12">
+                                Sim! Todos os nossos cursos técnicos são reconhecidos pelo Ministério da Educação (MEC) e possuem validade nacional. Você receberá um certificado oficial que é aceito em todo o território brasileiro.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
-                <div class="bg-ret-blue-dark rounded-2xl p-8 md:p-12 text-white">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4">
-                        Ainda tem dúvidas?
-                    </h3>
-                    <p class="text-xl text-gray-200 mb-8">
-                        Nossa equipe está pronta para esclarecer todas as suas questões.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#contato" class="bg-ret-yellow text-ret-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-200 transform hover:scale-105">
-                            Falar com atendente
-                        </a>
-                        <a href="tel:+5511999999999" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-ret-blue-dark transition-all duration-200 transform hover:scale-105">
-                            Ligar agora
-                        </a>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
+                        <div class="flex items-center">
+                            <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
+                                <i class="fas fa-question-circle text-ret-yellow"></i>
+                            </div>
+                            <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
+                                Os cursos são totalmente online?
+                            </h3>
+                        </div>
+                        <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600 leading-relaxed pl-12">
+                                Sim, todos os nossos cursos são 100% online. Você pode estudar de qualquer lugar, no seu próprio ritmo, com total flexibilidade de horários.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
+                        <div class="flex items-center">
+                            <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
+                                <i class="fas fa-question-circle text-ret-yellow"></i>
+                            </div>
+                            <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
+                                Como funciona o suporte ao aluno?
+                            </h3>
+                        </div>
+                        <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600 leading-relaxed pl-12">
+                                Oferecemos suporte completo através de chat online, e-mail e telefone. Nossa equipe está disponível para esclarecer dúvidas sobre o conteúdo e questões técnicas da plataforma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
+                        <div class="flex items-center">
+                            <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
+                                <i class="fas fa-question-circle text-ret-yellow"></i>
+                            </div>
+                            <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
+                                Quanto tempo demora para concluir um curso?
+                            </h3>
+                        </div>
+                        <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600 leading-relaxed pl-12">
+                                O tempo varia conforme o curso escolhido e sua dedicação. Em média, nossos cursos técnicos têm duração de 12 a 18 meses, mas você pode concluir no seu próprio ritmo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-button">
+                        <div class="flex items-center">
+                            <div class="bg-ret-blue-dark rounded-full p-2 mr-4">
+                                <i class="fas fa-question-circle text-ret-yellow"></i>
+                            </div>
+                            <h3 class="text-lg md:text-xl font-semibold text-ret-blue-dark">
+                                Posso parcelar o pagamento do curso?
+                            </h3>
+                        </div>
+                        <i class="fas fa-chevron-down text-ret-blue-dark transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600 leading-relaxed pl-12">
+                                Sim! Oferecemos diversas opções de pagamento, incluindo parcelamento em até 12x sem juros no cartão de crédito. Entre em contato para conhecer todas as opções disponíveis.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -892,28 +774,23 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="mb-8" data-aos="zoom-in" data-aos-delay="200">
                         <div class="bg-ret-yellow rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-graduation-cap text-ret-blue-dark text-2xl"></i>
+                            <i class="fas fa-graduation-cap text-ret-blue-dark text-3xl"></i>
                         </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                            Transforme sua Carreira Hoje!
+                        </h2>
+                        <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+                            Não perca mais tempo! Invista no seu futuro e garante uma carreira de sucesso com nossos cursos técnicos reconhecidos pelo MEC.
+                        </p>
                     </div>
-
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                        Está pronto para dar o 
-                        <span class="text-ret-yellow">próximo passo?</span>
-                    </h2>
                     
-                    <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
-                        Não perca mais tempo! Transforme sua carreira hoje mesmo com nossos 
-                        cursos técnicos de qualidade. Milhares de alunos já conquistaram seus 
-                        objetivos profissionais conosco.
-                    </p>
-
                     <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12" data-aos="fade-up" data-aos-delay="400">
                         <a href="#cursos" class="bg-ret-yellow text-ret-blue-dark px-12 py-4 rounded-full font-bold text-xl hover:bg-yellow-300 transition-all duration-200 inline-flex items-center justify-center shadow-lg transform hover:scale-105">
                             <i class="fas fa-graduation-cap mr-3"></i>
                             Matricule-se Agora
                         </a>
                         
-                        <a href="/cursos" class="bg-transparent border-2 border-white text-white px-12 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
+                        <a href="cursos_extras.html" class="bg-transparent border-2 border-white text-white px-12 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
                             <i class="fas fa-book-open mr-3"></i>
                             Ver todos os cursos
                         </a>
@@ -923,31 +800,14 @@
                         <div class="text-center">
                             <div class="text-3xl font-bold text-ret-yellow mb-2">✓</div>
                             <div class="text-white font-semibold">Certificação MEC</div>
-                            <div class="text-gray-300 text-sm">Reconhecimento nacional</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-ret-yellow mb-2">✓</div>
-                            <div class="text-white font-semibold">Flexibilidade Total</div>
-                            <div class="text-gray-300 text-sm">Estude no seu ritmo</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-ret-yellow mb-2">✓</div>
                             <div class="text-white font-semibold">Suporte Completo</div>
-                            <div class="text-gray-300 text-sm">Acompanhamento pedagógico</div>
                         </div>
-                    </div>
-
-                    <div class="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20" data-aos="fade-up" data-aos-delay="800">
-                        <h3 class="text-2xl font-bold text-white mb-4">
-                            🔥 Oferta Especial - Últimas Vagas!
-                        </h3>
-                        <p class="text-gray-200 mb-4">
-                            Garante sua vaga agora e tenha acesso imediato à nossa plataforma de ensino.
-                        </p>
-                        <div class="flex items-center justify-center text-ret-yellow font-semibold">
-                            <i class="fas fa-arrow-right mr-2"></i>
-                            Matrículas abertas por tempo limitado
-                            <i class="fas fa-arrow-right ml-2"></i>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-ret-yellow mb-2">✓</div>
+                            <div class="text-white font-semibold">Flexibilidade Total</div>
                         </div>
                     </div>
                 </div>
@@ -956,32 +816,29 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contato" class="bg-ret-blue-medium text-white">
-        <div class="container mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer class="gradient-bg pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Logo e Descrição -->
-                <div class="lg:col-span-1" data-aos="fade-up">
+                <div data-aos="fade-up">
                     <div class="flex items-center mb-6">
-                        <img src="ret.png" alt="RET - Rede de Ensino Técnico" class="h-12 w-auto mr-3">
-                        <span class="text-xl font-semibold">
-                            Rede de Ensino Técnico
-                        </span>
+                        <img src="ret.png" alt="RET Logo" class="h-10 w-auto mr-3">
+                        <span class="text-2xl font-bold text-white">RET</span>
                     </div>
-                    <p class="text-gray-200 mb-6 leading-relaxed">
-                        Transformando vidas através da educação técnica de qualidade há mais de 15 anos. 
-                        Sua carreira de sucesso começa aqui!
+                    <p class="text-gray-200 leading-relaxed mb-6">
+                        Mais de 15 anos transformando vidas através da educação técnica de qualidade. Cursos reconhecidos pelo MEC com metodologia inovadora.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://cnpj.biz/07641146000165" target="_blank" class="bg-ret-blue-dark p-3 rounded-full hover:text-ret-yellow transition-colors duration-200 transform hover:scale-110">
-                            <i class="fas fa-external-link-alt"></i>
+                        <a href="#" class="bg-ret-yellow/20 hover:bg-ret-yellow hover:text-ret-blue-dark text-ret-yellow p-2 rounded-full transition-all duration-200">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/rededeensinotecnico/" target="_blank" class="bg-ret-blue-dark p-3 rounded-full hover:text-pink-400 transition-colors duration-200 transform hover:scale-110">
+                        <a href="#" class="bg-ret-yellow/20 hover:bg-ret-yellow hover:text-ret-blue-dark text-ret-yellow p-2 rounded-full transition-all duration-200">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/pccursosonline" target="_blank" class="bg-ret-blue-dark p-3 rounded-full hover:text-blue-400 transition-colors duration-200 transform hover:scale-110">
-                            <i class="fab fa-facebook"></i>
+                        <a href="#" class="bg-ret-yellow/20 hover:bg-ret-yellow hover:text-ret-blue-dark text-ret-yellow p-2 rounded-full transition-all duration-200">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://www.youtube.com/channel/UCJWRWQvWbNOmk9yfftCsHFw" target="_blank" class="bg-ret-blue-dark p-3 rounded-full hover:text-red-400 transition-colors duration-200 transform hover:scale-110">
+                        <a href="#" class="bg-ret-yellow/20 hover:bg-ret-yellow hover:text-ret-blue-dark text-ret-yellow p-2 rounded-full transition-all duration-200">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -992,9 +849,9 @@
                     <h3 class="text-xl font-semibold mb-6 text-ret-yellow">Links Rápidos</h3>
                     <ul class="space-y-3">
                         <li><a href="#inicio" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Início</a></li>
-                        <li><a href="#quem-somos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Quem Somos</a></li>
+                        <li><a href="quem-somos.html" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Quem Somos</a></li>
                         <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Cursos</a></li>
-                        <li><a href="#depoimentos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Depoimentos</a></li>
+
                         <li><a href="#faq" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">FAQ</a></li>
                         <li><a href="#contato" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Contato</a></li>
                     </ul>
@@ -1007,7 +864,7 @@
                         <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Auxiliar Administrativo</a></li>
                         <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Automação Industrial</a></li>
                         <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Eletricista Básico</a></li>
-                        <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Gestão em Logística</a></li>
+                        <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Logística</a></li>
                         <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Atendente de Farmácia</a></li>
                         <li><a href="#cursos" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Auxiliar de Enfermagem</a></li>
                     </ul>
@@ -1029,8 +886,8 @@
                         
                         <div class="flex items-center">
                             <i class="fas fa-phone text-ret-yellow mr-3"></i>
-                            <a href="tel:+551133334444" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">
-                                (11) 3333-4444
+                            <a href="tel:+5511999999999" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">
+                                (11) 99999-9999
                             </a>
                         </div>
                         
@@ -1041,72 +898,38 @@
                             </a>
                         </div>
                         
-                        <div class="flex items-start">
-                            <i class="fas fa-clock text-ret-yellow mr-3 mt-1"></i>
-                            <div>
-                                <p class="text-gray-200">
-                                    Segunda a Sexta: 8h às 18h<br>
-                                    Sábado: 8h às 12h
-                                </p>
-                            </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-ret-yellow mr-3"></i>
+                            <p class="text-gray-200">
+                                Seg - Sex: 8h às 18h<br>
+                                Sáb: 8h às 12h
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Divider -->
-            <div class="border-t border-ret-blue-dark my-8"></div>
-
-            <!-- Bottom Footer -->
-            <div class="flex flex-col md:flex-row justify-between items-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="text-gray-200 mb-4 md:mb-0">
-                    <p>&copy; 2024 Rede de Ensino Técnico (RET). Todos os direitos reservados.</p>
-                    <p class="text-sm">CNPJ: 07.641.146/0001-65</p>
+            <!-- Linha de Separação -->
+            <div class="border-t border-ret-yellow/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-200 text-sm mb-4 md:mb-0">
+                        © 2024 RET - Rede de Ensino Técnico. Todos os direitos reservados.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Política de Privacidade</a>
+                        <a href="#" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Termos de Uso</a>
+                        <a href="#" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">Certificações</a>
+                    </div>
                 </div>
-                
-                <div class="flex space-x-6 text-sm">
-                    <a href="/politica-privacidade" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">
-                        Política de Privacidade
-                    </a>
-                    <a href="/termos-uso" class="text-gray-200 hover:text-ret-yellow transition-colors duration-200">
-                        Termos de Uso
-                    </a>
-                </div>
-            </div>
-
-            <!-- Linktree Link -->
-            <div class="text-center mt-8" data-aos="fade-up" data-aos-delay="500">
-                <a href="https://linktr.ee/cursospcserrana" target="_blank" class="inline-flex items-center text-ret-yellow hover:text-yellow-300 transition-colors duration-200">
-                    <i class="fas fa-external-link-alt mr-2"></i>
-                    Acesse todos os nossos links
-                </a>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div id="whatsapp-btn" class="fixed bottom-6 right-6 z-50" style="transform: scale(0);">
-        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20informações%20sobre%20os%20cursos%20da%20RET.%20Pode%20me%20ajudar?" target="_blank" class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl transition-all duration-200 flex items-center justify-center group relative">
-            <i class="fas fa-comments text-2xl"></i>
-            
-            <!-- Tooltip -->
-            <div class="absolute right-full mr-3 bg-ret-blue-dark text-white px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                Fale conosco no WhatsApp
-                <div class="absolute top-1/2 right-0 transform translate-x-full -translate-y-1/2 border-4 border-transparent border-l-ret-blue-dark"></div>
-            </div>
-            
-            <!-- Pulse Animation -->
-            <div class="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></div>
-        </a>
-    </div>
-
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script>
-        // Initialize AOS
         AOS.init({
-            duration: 800,
+            duration: 1000,
             once: true,
             offset: 100
         });
@@ -1114,144 +937,51 @@
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
-            } else {
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-times');
-            }
-        });
-
-        // Close mobile menu when clicking on links
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
+        }
 
-        // FAQ Accordion
-        const faqButtons = document.querySelectorAll('.faq-button');
-        faqButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.closest('.faq-item');
-                const faqContent = faqItem.querySelector('.faq-content');
-                const chevron = button.querySelector('.fa-chevron-down');
-                
-                // Close all other FAQ items
-                faqButtons.forEach(otherButton => {
-                    if (otherButton !== button) {
-                        const otherItem = otherButton.closest('.faq-item');
-                        const otherContent = otherItem.querySelector('.faq-content');
-                        const otherChevron = otherButton.querySelector('.fa-chevron-down');
-                        
-                        otherContent.classList.add('hidden');
-                        otherChevron.style.transform = 'rotate(0deg)';
+
+
+
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const content = faqItem.querySelector('.faq-content');
+                    const icon = button.querySelector('.fa-chevron-down');
+                    
+                    // Close other open FAQs
+                    faqButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            const otherItem = otherButton.closest('.faq-item');
+                            const otherContent = otherItem.querySelector('.faq-content');
+                            const otherIcon = otherButton.querySelector('.fa-chevron-down');
+                            
+                            otherContent.classList.add('hidden');
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    content.classList.toggle('hidden');
+                    
+                    if (content.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        icon.style.transform = 'rotate(180deg)';
                     }
                 });
-                
-                // Toggle current FAQ item
-                faqContent.classList.toggle('hidden');
-                if (faqContent.classList.contains('hidden')) {
-                    chevron.style.transform = 'rotate(0deg)';
-                } else {
-                    chevron.style.transform = 'rotate(180deg)';
-                }
             });
         });
 
-        // Testimonials Carousel
-        const testimonials = [
-            {
-                name: 'Maria Silva',
-                course: 'Auxiliar Administrativo',
-                text: 'A RET transformou minha carreira! Em apenas 6 meses consegui uma promoção na empresa onde trabalho. A metodologia é excelente e o suporte dos professores é incrível.',
-                image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
-            },
-            {
-                name: 'João Santos',
-                course: 'Eletricista Básico',
-                text: 'Sempre quis trabalhar na área elétrica e graças ao curso da RET consegui realizar esse sonho. Hoje trabalho em uma empresa renomada e estou muito satisfeito.',
-                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
-            },
-            {
-                name: 'Ana Carolina',
-                course: 'Auxiliar de Enfermagem',
-                text: 'O curso superou todas as minhas expectativas. Professores qualificados, material atualizado e uma plataforma moderna. Recomendo para todos!',
-                image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
-            }
-        ];
-
-        let currentTestimonial = 0;
-
-        const testimonialImage = document.getElementById('testimonial-image');
-        const testimonialText = document.getElementById('testimonial-text');
-        const testimonialName = document.getElementById('testimonial-name');
-        const testimonialCourse = document.getElementById('testimonial-course');
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
-        const prevBtn = document.getElementById('prev-testimonial');
-        const nextBtn = document.getElementById('next-testimonial');
-
-        function updateTestimonial() {
-            const testimonial = testimonials[currentTestimonial];
-            
-            testimonialImage.src = testimonial.image;
-            testimonialImage.alt = testimonial.name;
-            testimonialText.textContent = `"${testimonial.text}"`;
-            testimonialName.textContent = testimonial.name;
-            testimonialCourse.textContent = `Formada em ${testimonial.course}`;
-            
-            // Update dots
-            testimonialDots.forEach((dot, index) => {
-                if (index === currentTestimonial) {
-                    dot.classList.remove('bg-gray-300');
-                    dot.classList.add('bg-ret-blue-dark');
-                } else {
-                    dot.classList.remove('bg-ret-blue-dark');
-                    dot.classList.add('bg-gray-300');
-                }
-            });
-        }
-
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial();
-        }
-
-        function prevTestimonial() {
-            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-            updateTestimonial();
-        }
-
-        nextBtn.addEventListener('click', nextTestimonial);
-        prevBtn.addEventListener('click', prevTestimonial);
-
-        // Dots navigation
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentTestimonial = index;
-                updateTestimonial();
-            });
-        });
-
-        // Auto-advance testimonials every 5 seconds
-        setInterval(nextTestimonial, 5000);
-
-        // WhatsApp Button Animation
-        setTimeout(() => {
-            const whatsappBtn = document.getElementById('whatsapp-btn');
-            whatsappBtn.style.transform = 'scale(1)';
-            whatsappBtn.style.transition = 'transform 0.3s ease-out';
-        }, 2000);
-
-        // Smooth scroll for anchor links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1261,9 +991,14 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
             });
         });
     </script>
 </body>
-</html> 
+</html>

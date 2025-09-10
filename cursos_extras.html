@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#001F54">
+    
+    <title>Todos os Cursos Técnicos - RET | Rede de Ensino Técnico</title>
+    <meta name="description" content="Conheça todos os cursos técnicos oferecidos pela RET. Certificação MEC, metodologia moderna e flexibilidade total.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ret-blue-dark': '#001F54',
+                        'ret-blue-medium': '#004AAD',
+                        'ret-yellow': '#FFD400',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #001F54 0%, #004AAD 100%); }
+        .course-card { height: 420px; display: flex; flex-direction: column; }
+        .course-card .course-content { flex: 1; display: flex; flex-direction: column; }
+        .course-card .course-description { flex: 1; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="ret.png" alt="RET - Rede de Ensino Técnico" class="h-14 w-auto mr-3">
+                    <span class="text-2xl font-bold text-ret-blue-dark">RET</span>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#inicio" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Início</a>
+                    <a href="index.html#cursos" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Cursos</a>
+                    <a href="index.html#contato" class="text-ret-blue-dark hover:text-ret-blue-medium transition-colors duration-200 font-medium">Contato</a>
+                </nav>
+                <div class="hidden lg:block">
+                    <a href="index.html#matricula" class="bg-ret-yellow text-ret-blue-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200">
+                        Matricule-se Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <div class="bg-ret-yellow rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-graduation-cap text-ret-blue-dark text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Todos os Cursos Técnicos
+                </h1>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
+                    Explore nossa completa grade de cursos técnicos reconhecidos pelo MEC e encontre a formação ideal para transformar sua carreira profissional.
+                </p>
+                <a href="index.html" class="bg-ret-yellow text-ret-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Voltar ao Início
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Cursos -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Técnico em Administração -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="100" id="administracao">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-briefcase text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ADMINISTRAÇÃO
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1000h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação completa em gestão administrativa, processos organizacionais, gestão de pessoas e recursos. Prepare-se para atuar em diversos setores do mercado.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Assistente Administrativo, Analista de Processos, Coordenador de Equipes, Gestor de Projetos</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Agrimensura -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="200" id="agrimensura">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-map text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM AGRIMENSURA
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Especialização em medição e demarcação de terrenos, topografia e cartografia. Atue com precisão em levantamentos topográficos.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Empresas de Topografia, Construtoras, Órgãos Públicos, Cartórios de Registro</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Mecânica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="300" id="mecanica">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-cogs text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM MECÂNICA
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1200h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação em sistemas mecânicos, manutenção industrial e projetos mecânicos. Domine equipamentos e processos industriais.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Indústrias, Oficinas, Manutenção Industrial, Projetos Mecânicos</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Edificações -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="400" id="edificacoes">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-building text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM EDIFICAÇÕES
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Especialização em construção civil, projetos arquitetônicos e estruturais. Atue no planejamento e execução de obras.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Construtoras, Escritórios de Arquitetura, Órgãos Públicos, Fiscalização</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Eletrônica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="500" id="eletronica">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-microchip text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ELETRÔNICA
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1280h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação em circuitos eletrônicos, sistemas digitais e microcontroladores. Trabalhe com tecnologia de ponta.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Indústria Eletrônica, Telecomunicações, Manutenção, Desenvolvimento</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Eletromecânica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="600" id="eletromecanica">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-bolt text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ELETROMECÂNICA
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Combinação de conhecimentos elétricos e mecânicos para indústria. Atue em manutenção e projetos industriais.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Indústrias, Manutenção, Automação, Projetos Eletromecânicos</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Automação Industrial -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="700" id="automacao">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-red-500 to-pink-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-robot text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM AUTOMAÇÃO INDUSTRIAL
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1300h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Especialização em sistemas automatizados e controle industrial. Trabalhe com robôtica e automação de processos.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Indústria 4.0, Automação, Robótica, Controle de Processos</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Eletrotécnica -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="800" id="eletrotecnica">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-plug text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM ELETROTÉCNICA
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1280h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Formação em sistemas elétricos, instalações de potência e energia. Atue com segurança em instalações elétricas.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Concessionárias de Energia, Indústrias, Instalações Prediais</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Logística -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="900" id="logistica">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-truck text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM LOGÍSTICA
+                        </h3>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span class="text-sm">Consultar carga horária</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Gestão de cadeia de suprimentos, distribuição e armazenagem. Otimize processos logísticos empresariais.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Transportadoras, E-commerce, Indústrias, Centros de Distribuição</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Telecomunicações -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="1000" id="telecomunicacoes">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-broadcast-tower text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM TELECOMUNICAÇÕES
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1360h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Sistemas de comunicação, redes e telecomunicações modernas. Atue na era da conectividade digital.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Operadoras de Telecom, Provedores de Internet, Instalação de Redes</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Segurança do Trabalho -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="1100" id="seguranca">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-hard-hat text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM SEGURANÇA DO TRABALHO
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1200h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Prevenção de acidentes e segurança ocupacional em empresas. Proteja vidas e garanta ambiente seguro.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Indústrias, Construção Civil, Órgãos Públicos, Consultoria</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Meio Ambiente -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border border-gray-100 course-card" data-aos="fade-up" data-aos-delay="1200" id="meio-ambiente">
+                    <div class="course-content">
+                        <div class="bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-leaf text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ret-blue-dark mb-2 group-hover:text-ret-blue-medium transition-colors duration-300">
+                            TÉCNICO EM MEIO AMBIENTE
+                        </h3>
+                        <div class="flex items-center text-ret-yellow mb-3">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm font-semibold">1220h</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed course-description">
+                            Gestão ambiental, sustentabilidade e preservação ambiental. Cuide do futuro do planeta.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Áreas de atuação:</strong></p>
+                                <p class="text-xs text-gray-600">Órgãos Ambientais, Consultoria, Indústrias, ONGs Ambientais</p>
+                            </div>
+                            <a href="index.html#matricula" class="w-full bg-gradient-to-r from-ret-yellow to-orange-400 text-ret-blue-dark px-4 py-2 rounded-full font-semibold hover:from-orange-400 hover:to-ret-yellow transition-all duration-200 text-sm block text-center">
+                                Matricular-se
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="py-20 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Pronto para Começar?
+                </h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Escolha o curso que mais se adequa ao seu perfil e transforme sua carreira profissional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="index.html#matricula" class="bg-ret-yellow text-ret-blue-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all duration-200 inline-flex items-center justify-center shadow-lg transform hover:scale-105">
+                        <i class="fas fa-graduation-cap mr-3"></i>
+                        Matricule-se Agora
+                    </a>
+                    <a href="index.html#contato" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-ret-blue-dark transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
+                        <i class="fas fa-phone mr-3"></i>
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-gray-200">
+                <div class="flex items-center justify-center mb-6">
+                    <img src="ret.png" alt="RET Logo" class="h-10 w-auto mr-3">
+                    <span class="text-2xl font-bold text-white">RET</span>
+                </div>
+                <p class="mb-6">© 2024 RET - Rede de Ensino Técnico. Todos os direitos reservados.</p>
+                <a href="index.html" class="text-ret-yellow hover:text-white transition-colors duration-200">
+                    Voltar ao Site Principal
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll to course if anchor is present
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetElement.classList.add('ring-4', 'ring-ret-yellow', 'ring-opacity-50');
+                    setTimeout(() => {
+                        targetElement.classList.remove('ring-4', 'ring-ret-yellow', 'ring-opacity-50');
+                    }, 3000);
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
